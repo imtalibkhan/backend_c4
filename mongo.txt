@@ -1,0 +1,815 @@
+> show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+job         0.000GB
+local       0.000GB
+test1       0.000GB
+> use local
+switched to db local
+> show collections
+users
+> db.users.find().pretty()
+{ "_id" : ObjectId("61af7924a7f91ef70498978b"), "firstname" : "khan" }
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feca"),
+        "id" : 1,
+        "movie_name" : "Conrado",
+        "movie_genre" : "Photobean",
+        "production_year" : 1993,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecb"),
+        "id" : 2,
+        "movie_name" : "Janna",
+        "movie_genre" : "Twitterbeat",
+        "production_year" : 2011,
+        "budget" : 33
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecc"),
+        "id" : 3,
+        "movie_name" : "Concettina",
+        "movie_genre" : "Skippad",
+        "production_year" : 2010,
+        "budget" : 64
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecd"),
+        "id" : 4,
+        "movie_name" : "Brien",
+        "movie_genre" : "Eadel",
+        "production_year" : 2010,
+        "budget" : 7
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fece"),
+        "id" : 5,
+        "movie_name" : "Rosita",
+        "movie_genre" : "Topdrive",
+        "production_year" : 1993,
+        "budget" : 77
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecf"),
+        "id" : 6,
+        "movie_name" : "Winnah",
+        "movie_genre" : "Fliptune",
+        "production_year" : 2006,
+        "budget" : 89
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed0"),
+        "id" : 7,
+        "movie_name" : "Gwenette",
+        "movie_genre" : "Browsebug",
+        "production_year" : 1993,
+        "budget" : 91
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed1"),
+        "id" : 8,
+        "movie_name" : "Gaile",
+        "movie_genre" : "Shufflebeat",
+        "production_year" : 2012,
+        "budget" : 4
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed2"),
+        "id" : 9,
+        "movie_name" : "Karisa",
+        "movie_genre" : "Riffwire",
+        "production_year" : 1992,
+        "budget" : 6
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed3"),
+        "id" : 10,
+        "movie_name" : "Vilma",
+        "movie_genre" : "Gabcube",
+        "production_year" : 2003,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed4"),
+        "id" : 11,
+        "movie_name" : "Isidor",
+        "movie_genre" : "Browsedrive",
+        "production_year" : 2002,
+        "budget" : 2
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed5"),
+        "id" : 12,
+        "movie_name" : "Wilt",
+        "movie_genre" : "Mudo",
+        "production_year" : 1987,
+        "budget" : 19
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed6"),
+        "id" : 13,
+        "movie_name" : "Jade",
+        "movie_genre" : "Photolist",
+        "production_year" : 2007,
+        "budget" : 36
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed7"),
+        "id" : 14,
+        "movie_name" : "Gawen",
+        "movie_genre" : "Ooba",
+        "production_year" : 2009,
+        "budget" : 76
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed8"),
+        "id" : 15,
+        "movie_name" : "Clay",
+        "movie_genre" : "Agivu",
+        "production_year" : 2010,
+        "budget" : 29
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed9"),
+        "id" : 16,
+        "movie_name" : "Eugenio",
+        "movie_genre" : "Browsedrive",
+        "production_year" : 2006,
+        "budget" : 84
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feda"),
+        "id" : 17,
+        "movie_name" : "Dene",
+        "movie_genre" : "Babbleopia",
+        "production_year" : 1989,
+        "budget" : 91
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedb"),
+        "id" : 18,
+        "movie_name" : "Dyanne",
+        "movie_genre" : "Mymm",
+        "production_year" : 2003,
+        "budget" : 3
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedc"),
+        "id" : 19,
+        "movie_name" : "Chen",
+        "movie_genre" : "Kayveo",
+        "production_year" : 2012,
+        "budget" : 40
+}
+Type "it" for more
+> db.users.find().count()
+101
+>
+==============================================================
+> db.users.find({movie_name:{$eq: "Dyanne"}}).pretty()
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedb"),
+        "id" : 18,
+        "movie_name" : "Dyanne",
+        "movie_genre" : "Mymm",
+        "production_year" : 2003,
+        "budget" : 3
+}
+>
+================================================================
+
+}
+> db.users.find({movie_name:{$ne: "Dyanne"}}).pretty()
+{ "_id" : ObjectId("61af7924a7f91ef70498978b"), "firstname" : "khan" }
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feca"),
+        "id" : 1,
+        "movie_name" : "Conrado",
+        "movie_genre" : "Photobean",
+        "production_year" : 1993,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecb"),
+        "id" : 2,
+        "movie_name" : "Janna",
+        "movie_genre" : "Twitterbeat",
+        "production_year" : 2011,
+        "budget" : 33
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecc"),
+        "id" : 3,
+        "movie_name" : "Concettina",
+        "movie_genre" : "Skippad",
+        "production_year" : 2010,
+        "budget" : 64
+}
+=================================================================
+
+Type "it" for more
+> db.users.find({budget:{$gte: 10}}).pretty()
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feca"),
+        "id" : 1,
+        "movie_name" : "Conrado",
+        "movie_genre" : "Photobean",
+        "production_year" : 1993,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecb"),
+        "id" : 2,
+        "movie_name" : "Janna",
+        "movie_genre" : "Twitterbeat",
+        "production_year" : 2011,
+        "budget" : 33
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecc"),
+        "id" : 3,
+        "movie_name" : "Concettina",
+        "movie_genre" : "Skippad",
+        "production_year" : 2010,
+        "budget" : 64
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fece"),
+        "id" : 5,
+        "movie_name" : "Rosita",
+        "movie_genre" : "Topdrive",
+        "production_year" : 1993,
+        "budget" : 77
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecf"),
+        "id" : 6,
+        "movie_name" : "Winnah",
+        "movie_genre" : "Fliptune",
+        "production_year" : 2006,
+        "budget" : 89
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed0"),
+        "id" : 7,
+        "movie_name" : "Gwenette",
+        "movie_genre" : "Browsebug",
+        "production_year" : 1993,
+        "budget" : 91
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed3"),
+        "id" : 10,
+        "movie_name" : "Vilma",
+        "movie_genre" : "Gabcube",
+        "production_year" : 2003,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed5"),
+        "id" : 12,
+        "movie_name" : "Wilt",
+        "movie_genre" : "Mudo",
+        "production_year" : 1987,
+        "budget" : 19
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed6"),
+        "id" : 13,
+        "movie_name" : "Jade",
+        "movie_genre" : "Photolist",
+        "production_year" : 2007,
+        "budget" : 36
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed7"),
+        "id" : 14,
+        "movie_name" : "Gawen",
+        "movie_genre" : "Ooba",
+        "production_year" : 2009,
+        "budget" : 76
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed8"),
+        "id" : 15,
+        "movie_name" : "Clay",
+        "movie_genre" : "Agivu",
+        "production_year" : 2010,
+        "budget" : 29
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed9"),
+        "id" : 16,
+        "movie_name" : "Eugenio",
+        "movie_genre" : "Browsedrive",
+        "production_year" : 2006,
+        "budget" : 84
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feda"),
+        "id" : 17,
+        "movie_name" : "Dene",
+        "movie_genre" : "Babbleopia",
+        "production_year" : 1989,
+        "budget" : 91
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedc"),
+        "id" : 19,
+        "movie_name" : "Chen",
+        "movie_genre" : "Kayveo",
+        "production_year" : 2012,
+        "budget" : 40
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedd"),
+        "id" : 20,
+        "movie_name" : "Dru",
+        "movie_genre" : "Trilia",
+        "production_year" : 1993,
+        "budget" : 10
+}
+{
+    ====================================================
+
+    > db.users.find({$and:[{budget:{$gt: 10}},{production_year:{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecb"),
+        "id" : 2,
+        "movie_name" : "Janna",
+        "movie_genre" : "Twitterbeat",
+        "production_year" : 2011,
+        "budget" : 33
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecc"),
+        "id" : 3,
+        "movie_name" : "Concettina",
+        "movie_genre" : "Skippad",
+        "production_year" : 2010,
+        "budget" : 64
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecf"),
+        "id" : 6,
+        "movie_name" : "Winnah",
+        "movie_genre" : "Fliptune",
+        "production_year" : 2006,
+        "budget" : 89
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed3"),
+        "id" : 10,
+        "movie_name" : "Vilma",
+        "movie_genre" : "Gabcube",
+        "production_year" : 2003,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed6"),
+        "id" : 13,
+        "movie_name" : "Jade",
+        "movie_genre" : "Photolist",
+        "production_year" : 2007,
+        "budget" : 36
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed7"),
+        "id" : 14,
+        "movie_name" : "Gawen",
+        "movie_genre" : "Ooba",
+        "production_year" : 2009,
+        "budget" : 76
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed8"),
+        "id" : 15,
+        "movie_name" : "Clay",
+        "movie_genre" : "Agivu",
+        "production_year" : 2010,
+        "budget" : 29
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed9"),
+        "id" : 16,
+        "movie_name" : "Eugenio",
+        "movie_genre" : "Browsedrive",
+        "production_year" : 2006,
+        "budget" : 84
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedc"),
+        "id" : 19,
+        "movie_name" : "Chen",
+        "movie_genre" : "Kayveo",
+        "production_year" : 2012,
+        "budget" : 40
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fede"),
+        "id" : 21,
+        "movie_name" : "Belvia",
+        "movie_genre" : "Eire",
+        "production_year" : 2009,
+        "budget" : 87
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fee0"),
+        "id" : 23,
+        "movie_name" : "Flss",
+        "movie_genre" : "Zoombeat",
+        "production_year" : 2003,
+        "budget" : 81
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fee4"),
+        "id" : 27,
+        "movie_name" : "Emmalynn",
+        "movie_genre" : "Quamba",
+        "production_year" : 2009,
+        "budget" : 95
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feed"),
+        "id" : 36,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Browsetype",
+        "production_year" : 2011,
+        "budget" : 47
+}
+=================================================================
+Type "it" for more
+> db.users.find({$nor:[{budget:{$gt: 10}},{production_year:{$gt:2000}}]}).pretty()
+{ "_id" : ObjectId("61af7924a7f91ef70498978b"), "firstname" : "khan" }
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed2"),
+        "id" : 9,
+        "movie_name" : "Karisa",
+        "movie_genre" : "Riffwire",
+        "production_year" : 1992,
+        "budget" : 6
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedd"),
+        "id" : 20,
+        "movie_name" : "Dru",
+        "movie_genre" : "Trilia",
+        "production_year" : 1993,
+        "budget" : 10
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff11"),
+        "id" : 72,
+        "movie_name" : "Meriel",
+        "movie_genre" : "Quire",
+        "production_year" : 2000,
+        "budget" : 4
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff1b"),
+        "id" : 82,
+        "movie_name" : "Aurelia",
+        "movie_genre" : "Feedspan",
+        "production_year" : 1996,
+        "budget" : 10
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff21"),
+        "id" : 88,
+        "movie_name" : "Carlene",
+        "movie_genre" : "Kaymbo",
+        "production_year" : 1988,
+        "budget" : 7
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff27"),
+        "id" : 94,
+        "movie_name" : "Winnie",
+        "movie_genre" : "Kwideo",
+        "production_year" : 1989,
+        "budget" : 9
+}
+>
+==================================
+}
+> db.users.find({$or:[{budget:{$ne: 10}},{production_year:{$ne:2000}}]}).pretty()
+{ "_id" : ObjectId("61af7924a7f91ef70498978b"), "firstname" : "khan" }
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feca"),
+        "id" : 1,
+        "movie_name" : "Conrado",
+        "movie_genre" : "Photobean",
+        "production_year" : 1993,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecb"),
+        "id" : 2,
+        "movie_name" : "Janna",
+        "movie_genre" : "Twitterbeat",
+        "production_year" : 2011,
+        "budget" : 33
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecc"),
+        "id" : 3,
+        "movie_name" : "Concettina",
+        "movie_genre" : "Skippad",
+        "production_year" : 2010,
+        "budget" : 64
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecd"),
+        "id" : 4,
+        "movie_name" : "Brien",
+        "movie_genre" : "Eadel",
+        "production_year" : 2010,
+        "budget" : 7
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fece"),
+        "id" : 5,
+        "movie_name" : "Rosita",
+        "movie_genre" : "Topdrive",
+        "production_year" : 1993,
+        "budget" : 77
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecf"),
+        "id" : 6,
+        "movie_name" : "Winnah",
+        "movie_genre" : "Fliptune",
+        "production_year" : 2006,
+        "budget" : 89
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed0"),
+        "id" : 7,
+        "movie_name" : "Gwenette",
+        "movie_genre" : "Browsebug",
+        "production_year" : 1993,
+        "budget" : 91
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed1"),
+        "id" : 8,
+        "movie_name" : "Gaile",
+        "movie_genre" : "Shufflebeat",
+        "production_year" : 2012,
+        "budget" : 4
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed2"),
+        "id" : 9,
+        "movie_name" : "Karisa",
+        "movie_genre" : "Riffwire",
+        "production_year" : 1992,
+        "budget" : 6
+}
+{
+========================================================
+
+>  db.users.find({$and:[{production_year:{$gt: 2000}},{production_year:{$lt:2010}}]}).pretty()
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fecf"),
+        "id" : 6,
+        "movie_name" : "Winnah",
+        "movie_genre" : "Fliptune",
+        "production_year" : 2006,
+        "budget" : 89
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed3"),
+        "id" : 10,
+        "movie_name" : "Vilma",
+        "movie_genre" : "Gabcube",
+        "production_year" : 2003,
+        "budget" : 37
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed4"),
+        "id" : 11,
+        "movie_name" : "Isidor",
+        "movie_genre" : "Browsedrive",
+        "production_year" : 2002,
+        "budget" : 2
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed6"),
+        "id" : 13,
+        "movie_name" : "Jade",
+        "movie_genre" : "Photolist",
+        "production_year" : 2007,
+        "budget" : 36
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed7"),
+        "id" : 14,
+        "movie_name" : "Gawen",
+        "movie_genre" : "Ooba",
+        "production_year" : 2009,
+        "budget" : 76
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed9"),
+        "id" : 16,
+        "movie_name" : "Eugenio",
+        "movie_genre" : "Browsedrive",
+        "production_year" : 2006,
+        "budget" : 84
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fedb"),
+        "id" : 18,
+        "movie_name" : "Dyanne",
+        "movie_genre" : "Mymm",
+        "production_year" : 2003,
+        "budget" : 3
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fede"),
+        "id" : 21,
+        "movie_name" : "Belvia",
+        "movie_genre" : "Eire",
+        "production_year" : 2009,
+        "budget" : 87
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fee0"),
+        "id" : 23,
+        "movie_name" : "Flss",
+        "movie_genre" : "Zoombeat",
+        "production_year" : 2003,
+        "budget" : 81
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fee4"),
+        "id" : 27,
+        "movie_name" : "Emmalynn",
+        "movie_genre" : "Quamba",
+        "production_year" : 2009,
+        "budget" : 95
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fee6"),
+        "id" : 29,
+        "movie_name" : "Madelena",
+        "movie_genre" : "Wikido",
+        "production_year" : 2002,
+        "budget" : 7
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581feef"),
+        "id" : 38,
+        "movie_name" : "Camille",
+        "movie_genre" : "Kaymbo",
+        "production_year" : 2004,
+        "budget" : 35
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fef4"),
+        "id" : 43,
+        "movie_name" : "Alfonso",
+        "movie_genre" : "Topicware",
+        "production_year" : 2002,
+        "budget" : 68
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fef7"),
+        "id" : 46,
+        "movie_name" : "Latia",
+        "movie_genre" : "Gabspot",
+        "production_year" : 2006,
+        "budget" : 2
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fef8"),
+        "id" : 47,
+        "movie_name" : "Perrine",
+        "movie_genre" : "Thoughtbridge",
+        "production_year" : 2002,
+        "budget" : 68
+}
+{
+========================================================
+Type "it" for more
+> db.users.find().sort({production_year:1,Movie_name:1}).pretty()
+{ "_id" : ObjectId("61af7924a7f91ef70498978b"), "firstname" : "khan" }
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff22"),
+        "id" : 89,
+        "movie_name" : "Liv",
+        "movie_genre" : "Twitterbridge",
+        "production_year" : 1967,
+        "budget" : 47
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff2c"),
+        "id" : 99,
+        "movie_name" : "Tobit",
+        "movie_genre" : "Skilith",
+        "production_year" : 1977,
+        "budget" : 28
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff03"),
+        "id" : 58,
+        "movie_name" : "Loni",
+        "movie_genre" : "Jaxnation",
+        "production_year" : 1985,
+        "budget" : 48
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fee2"),
+        "id" : 25,
+        "movie_name" : "Dinah",
+        "movie_genre" : "Mita",
+        "production_year" : 1986,
+        "budget" : 63
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff17"),
+        "id" : 78,
+        "movie_name" : "Amitie",
+        "movie_genre" : "Eamia",
+        "production_year" : 1986,
+        "budget" : 59
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581fed5"),
+        "id" : 12,
+        "movie_name" : "Wilt",
+        "movie_genre" : "Mudo",
+        "production_year" : 1987,
+        "budget" : 19
+}
+>  db.users.find({$and:[{production_year:{$gt: 2000}},{production_year:{$lt:2004}}]}).pretty().skip(9).limit(6)
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff10"),
+        "id" : 71,
+        "movie_name" : "Haleigh",
+        "movie_genre" : "Roomm",
+        "production_year" : 2003,
+        "budget" : 5
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff12"),
+        "id" : 73,
+        "movie_name" : "Lani",
+        "movie_genre" : "Dabshots",
+        "production_year" : 2003,
+        "budget" : 26
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff1c"),
+        "id" : 83,
+        "movie_name" : "Nico",
+        "movie_genre" : "Skipstorm",
+        "production_year" : 2001,
+        "budget" : 95
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff1f"),
+        "id" : 86,
+        "movie_name" : "Nicholle",
+        "movie_genre" : "Topicstorm",
+        "production_year" : 2001,
+        "budget" : 70
+}
+>
+>  db.users.find({$and:[{production_year:{$gt: 2000}},{production_year:{$lt:2004}}]}).pretty().skip(9).limit(6)
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff10"),
+        "id" : 71,
+        "movie_name" : "Haleigh",
+        "movie_genre" : "Roomm",
+        "production_year" : 2003,
+        "budget" : 5
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff12"),
+        "id" : 73,
+        "movie_name" : "Lani",
+        "movie_genre" : "Dabshots",
+        "production_year" : 2003,
+        "budget" : 26
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff1c"),
+        "id" : 83,
+        "movie_name" : "Nico",
+        "movie_genre" : "Skipstorm",
+        "production_year" : 2001,
+        "budget" : 95
+}
+{
+        "_id" : ObjectId("61bae301a69d5e0d0581ff1f"),
+        "id" : 86,
+        "movie_name" : "Nicholle",
+        "movie_genre" : "Topicstorm",
+        "production_year" : 2001,
+        "budget" : 70
+}
+>
